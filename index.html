@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WINNER AUTO CLUB — Подбор и доставка авто из США и Европы в Грузию</title>
+  <meta name="description" content="Премиальный сервис подбора, проверки и доставки автомобилей из США и Европы в Грузию (Рустави, Автопапа). Прозрачный бюджет, фиксация цены, юридическая чистота.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= STICKY HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="WINNER AUTO CLUB Главная">
+        <span class="logo-mark">W</span>
+        <div class="logo-text">
+          <span class="logo-title">WINNER</span>
+          <span class="logo-sub">AUTO CLUB</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#catalog" class="nav-link">Каталог</a>
+        <a href="#about" class="nav-link">О нас</a>
+        <a href="#calculator" class="nav-link">Калькулятор</a>
+        <a href="#faq" class="nav-link">Вопросы и ответы</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+995511299299" class="header-phone">+995 511 299 299</a>
+        <button type="button" class="btn btn-outline" data-modal="consult" data-subject="Шапка сайта">
+          Подобрать авто <span class="arrow">↗</span>
+        </button>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SLIDER ================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <!-- Left Editorial Content Column -->
+        <div class="hero-content">
+          <div class="hero-tag" id="heroTag">США И ЕВРОПА → ГРУЗИЯ</div>
+          
+          <h1 class="hero-title" id="heroTitle">
+            Мечта — в деталях.<br>
+            <span class="hero-subtitle">Выбор — за вами.</span>
+          </h1>
+
+          <p class="hero-desc" id="heroDesc">
+            Автомобили из Америки и Европы под заказ. Полное сопровождение: от поиска и проверки на аукционе до доставки и оформления в Рустави.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-primary" data-modal="consult" data-subject="Главный экран — Найти свой автомобиль">
+              Найти свой автомобиль <span class="arrow">↗</span>
+            </button>
+            <a href="#calculator" class="hero-link">
+              Рассчитать экономию <span class="arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Slider Scrubber Controls -->
+          <div class="hero-scrubber">
+            <div class="scrubber-top">
+              <span class="slide-counter" id="slideCounter">001 / 121</span>
+              <span class="scrubber-hint">ЛИСТАЙТЕ, ОТКРЫВАЙТЕ ДЕТАЛИ.</span>
+            </div>
+            <div class="scrubber-bar" id="scrubberBar" role="slider" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" tabindex="0">
+              <div class="scrubber-progress" id="scrubberProgress" style="width: 33.33%;"></div>
+              <div class="scrubber-thumb" id="scrubberThumb" style="left: 33.33%;"></div>
+            </div>
+            <div class="scrubber-nav">
+              <button type="button" class="scrub-btn" id="prevSlide" aria-label="Предыдущий слайд">←</button>
+              <div class="scrub-dots">
+                <button type="button" class="scrub-dot active" data-index="0" aria-label="Слайд 1"></button>
+                <button type="button" class="scrub-dot" data-index="1" aria-label="Слайд 2"></button>
+                <button type="button" class="scrub-dot" data-index="2" aria-label="Слайд 3"></button>
+              </div>
+              <button type="button" class="scrub-btn" id="nextSlide" aria-label="Следующий слайд">→</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Display Column -->
+        <div class="hero-visual">
+          <div class="hero-image-wrap" id="heroImageWrap">
+            <img src="assets/img/hero-slide-1.jpg" alt="Porsche 911 GT3 RS" class="hero-img active" id="heroImg1" loading="eager">
+            <img src="assets/img/hero-slide-2.jpg" alt="Porsche 911 GT3 RS детали" class="hero-img" id="heroImg2" loading="lazy">
+            <img src="assets/img/hero-slide-3.jpg" alt="Porsche 911 GT3 RS шасси" class="hero-img" id="heroImg3" loading="lazy">
+          </div>
+          <div class="hero-corner-badge">
+            <span class="badge-dot"></span>
+            <span>RUSTAVI / AUTOPAPA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 01 INTRO & BRAND TICKER ================= -->
+    <section class="section intro-section" id="route">
+      <div class="container">
+        <div class="section-badge">01 / ВАШ НОВЫЙ МАРШРУТ</div>
+        <div class="intro-grid">
+          <h2 class="section-title">
+            Хороший автомобиль.<br>
+            <span class="text-secondary">Правильный путь к нему.</span>
+          </h2>
+          <div class="intro-text">
+            <p>
+              Покупка автомобиля из-за рубежа — это возможность получить прозрачную историю, богатую комплектацию и существенную выгоду по сравнению с локальным рынком.
+            </p>
+            <p>
+              WINNER AUTO CLUB берёт на себя каждый этап: подбор на закрытых аукционах США и у проверенных европейских дилеров, технический аудит, страхование доставки в порт Поти и растаможку в Рустави.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sleek Brand Strip -->
+        <div class="brand-ticker-wrap">
+          <div class="brand-ticker">
+            <span class="brand-item">PORSCHE</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">BMW</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">MERCEDES-BENZ</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">AUDI</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">TESLA</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">HONDA</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">LAND ROVER</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">LEXUS</span>
+            <span class="brand-sep">·</span>
+            <span class="brand-item">VOLVO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 CATALOG ================= -->
+    <section class="section catalog-section" id="catalog">
+      <div class="container">
+        <div class="section-badge">02 / АВТОМОБИЛИ С ХАРАКТЕРОМ</div>
+        
+        <div class="catalog-header">
+          <h2 class="section-title">
+            Ваш следующий автомобиль.
+          </h2>
+          <p class="catalog-subhead">
+            Примеры недавно доставленных моделей и доступных к заказу прямо сейчас.
+          </p>
+        </div>
+
+        <!-- Controls: Filters, Search, Sort -->
+        <div class="catalog-toolbar">
+          <div class="filter-tabs" id="filterTabs">
+            <button type="button" class="filter-tab active" data-filter="all">Все автомобили <span class="tab-count">06</span></button>
+            <button type="button" class="filter-tab" data-filter="sedan">Седаны</button>
+            <button type="button" class="filter-tab" data-filter="sport">Спорткары</button>
+            <button type="button" class="filter-tab" data-filter="suv">Кроссоверы</button>
+            <button type="button" class="filter-tab" data-filter="electro">Электромобили</button>
+          </div>
+
+          <div class="catalog-search-sort">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="catalogSearch" placeholder="Поиск по марке или модели..." aria-label="Поиск по каталогу">
+              <button type="button" class="search-clear" id="searchClear" aria-label="Очистить поиск" style="display:none;">✕</button>
+            </div>
+
+            <div class="sort-box">
+              <select id="catalogSort" aria-label="Сортировка автомобилей">
+                <option value="featured">Сортировка: По умолчанию</option>
+                <option value="price-asc">Цена: Сначала доступные</option>
+                <option value="price-desc">Цена: Сначала премиум</option>
+                <option value="economy-desc">По максимальной выгоде</option>
+                <option value="year-desc">Сначала новые года</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catalog Grid -->
+        <div class="catalog-grid" id="catalogGrid">
+          <!-- Card 1: Porsche Panamera -->
+          <article class="car-card" data-category="sport sedan" data-price="72500" data-economy="14500" data-year="2021">
+            <div class="car-media">
+              <span class="route-badge">ЕВРОПА → ГРУЗИЯ</span>
+              <img src="assets/img/car-panamera.jpg" alt="Porsche Panamera" loading="lazy">
+            </div>
+            <div class="car-body">
+              <div class="car-header-row">
+                <h3 class="car-name">Porsche Panamera</h3>
+                <span class="car-tag">В наличии под ключ</span>
+              </div>
+              <div class="car-specs">
+                <span>2021</span>
+                <span class="spec-sep">·</span>
+                <span>48 000 км</span>
+                <span class="spec-sep">·</span>
+                <span>2.9 л (330 л.с.)</span>
+              </div>
+              <div class="car-price-row">
+                <div class="price-main">
+                  <span class="price-value">$72 500</span>
+                  <span class="price-label">Финальная стоимость</span>
+                </div>
+                <div class="price-diff">
+                  <span class="diff-badge">Разница: $14 500</span>
+                  <span class="diff-label">с рынком Грузии</span>
+                </div>
+              </div>
+              <div class="car-footer">
+                <button type="button" class="btn btn-card" data-modal="consult" data-subject="Porsche Panamera ($72 500)">
+                  Хочу похожий <span class="arrow">↗</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: BMW M5 Competition -->
+          <article class="car-card" data-category="sport sedan" data-price="64000" data-economy="12000" data-year="2020">
+            <div class="car-media">
+              <span class="route-badge">США → ГРУЗИЯ</span>
+              <img src="assets/img/car-m5.jpg" alt="BMW M5 Competition" loading="lazy">
+            </div>
+            <div class="car-body">
+              <div class="car-header-row">
+                <h3 class="car-name">BMW M5 Competition</h3>
+                <span class="car-tag">Под ключ</span>
+              </div>
+              <div class="car-specs">
+                <span>2020</span>
+                <span class="spec-sep">·</span>
+                <span>56 000 км</span>
+                <span class="spec-sep">·</span>
+                <span>4.4 л (625 л.с.)</span>
+              </div>
+              <div class="car-price-row">
+                <div class="price-main">
+                  <span class="price-value">$64 000</span>
+                  <span class="price-label">Финальная стоимость</span>
+                </div>
+                <div class="price-diff">
+                  <span class="diff-badge">Разница: $12 000</span>
+                  <span class="diff-label">с рынком Грузии</span>
+                </div>
+              </div>
+              <div class="car-footer">
+                <button type="button" class="btn btn-card" data-modal="consult" data-subject="BMW M5 Competition ($64 000)">
+                  Хочу похожий <span class="arrow">↗</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Mercedes-AMG GT -->
+          <article class="car-card" data-category="sport" data-price="68000" data-economy="11000" data-year="2020">
+            <div class="car-media">
+              <span class="route-badge">ЕВРОПА → ГРУЗИЯ</span>
+              <img src="assets/img/car-amg-gt.jpg" alt="Mercedes-AMG GT" loading="lazy">
+            </div>
+            <div class="car-body">
+              <div class="car-header-row">
+                <h3 class="car-name">Mercedes-AMG GT</h3>
+                <span class="car-tag">Под заказ</span>
+              </div>
+              <div class="car-specs">
+                <span>2020</span>
+                <span class="spec-sep">·</span>
+                <span>32 000 км</span>
+                <span class="spec-sep">·</span>
+                <span>4.0 л (530 л.с.)</span>
+              </div>
+              <div class="car-price-row">
+                <div class="price-main">
+                  <span class="price-value">$68 000</span>
+                  <span class="price-label">Финальная стоимость</span>
+                </div>
+                <div class="price-diff">
+                  <span class="diff-badge">Разница: $11 000</span>
+                  <span class="diff-label">с рынком Грузии</span>
+                </div>
+              </div>
+              <div class="car-footer">
+                <button type="button" class="btn btn-card" data-modal="consult" data-subject="Mercedes-AMG GT ($68 000)">
+                  Хочу похожий <span class="arrow">↗</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Tesla Model 3 -->
+          <article class="car-card" data-category="electro sedan" data-price="22000" data-economy="7000" data-year="2022">
+            <div class="car-media">
+              <span class="route-badge">США → ГРУЗИЯ</span>
+              <img src="assets/img/car-tesla.jpg" alt="Tesla Model 3" loading="lazy">
+            </div>
+            <div class="car-body">
+              <div class="car-header-row">
+                <h3 class="car-name">Tesla Model 3</h3>
+                <span class="car-tag">Хит заказов</span>
+              </div>
+              <div class="car-specs">
+                <span>2022</span>
+                <span class="spec-sep">·</span>
+                <span>41 000 км</span>
+                <span class="spec-sep">·</span>
+                <span>Dual Motor AWD</span>
+              </div>
+              <div class="car-price-row">
+                <div class="price-main">
+                  <span class="price-value">$22 000</span>
+                  <span class="price-label">Финальная стоимость</span>
+                </div>
+                <div class="price-diff">
+                  <span class="diff-badge">Разница: $7 000</span>
+                  <span class="diff-label">с рынком Грузии</span>
+                </div>
+              </div>
+              <div class="car-footer">
+                <button type="button" class="btn btn-card" data-modal="consult" data-subject="Tesla Model 3 ($22 000)">
+                  Хочу похожий <span class="arrow">↗</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Porsche Macan -->
+          <article class="car-card" data-category="suv" data-price="38000" data-economy="8000" data-year="2021">
+            <div class="car-media">
+              <span class="route-badge">ЕВРОПА → ГРУЗИЯ</span>
+              <img src="assets/img/car-macan.jpg" alt="Porsche Macan" loading="lazy">
+            </div>
+            <div class="car-body">
+              <div class="car-header-row">
+                <h3 class="car-name">Porsche Macan</h3>
+                <span class="car-tag">Под заказ</span>
+              </div>
+              <div class="car-specs">
+                <span>2021</span>
+                <span class="spec-sep">·</span>
+                <span>52 000 км</span>
+                <span class="spec-sep">·</span>
+                <span>2.0 л (245 л.с.)</span>
+              </div>
+              <div class="car-price-row">
+                <div class="price-main">
+                  <span class="price-value">$38 000</span>
+                  <span class="price-label">Финальная стоимость</span>
+                </div>
+                <div class="price-diff">
+                  <span class="diff-badge">Разница: $8 000</span>
+                  <span class="diff-label">с рынком Грузии</span>
+                </div>
+              </div>
+              <div class="car-footer">
+                <button type="button" class="btn btn-card" data-modal="consult" data-subject="Porsche Macan ($38 000)">
+                  Хочу похожий <span class="arrow">↗</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Honda Accord -->
+          <article class="car-card" data-category="sedan" data-price="20000" data-economy="5500" data-year="2021">
+            <div class="car-media">
+              <span class="route-badge">США → ГРУЗИЯ</span>
+              <img src="assets/img/car-accord.jpg" alt="Honda Accord" loading="lazy">
+            </div>
+            <div class="car-body">
+              <div class="car-header-row">
+                <h3 class="car-name">Honda Accord</h3>
+                <span class="car-tag">Надёжный выбор</span>
+              </div>
+              <div class="car-specs">
+                <span>2021</span>
+                <span class="spec-sep">·</span>
+                <span>35 000 км</span>
+                <span class="spec-sep">·</span>
+                <span>1.5 л Turbo (192 л.с.)</span>
+              </div>
+              <div class="car-price-row">
+                <div class="price-main">
+                  <span class="price-value">$20 000</span>
+                  <span class="price-label">Финальная стоимость</span>
+                </div>
+                <div class="price-diff">
+                  <span class="diff-badge">Разница: $5 500</span>
+                  <span class="diff-label">с рынком Грузии</span>
+                </div>
+              </div>
+              <div class="car-footer">
+                <button type="button" class="btn btn-card" data-modal="consult" data-subject="Honda Accord ($20 000)">
+                  Хочу похожий <span class="arrow">↗</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- No results message -->
+        <div class="no-results" id="noResults" style="display:none;">
+          <p>По вашему запросу автомобили не найдены.</p>
+          <button type="button" class="btn btn-outline-dark" id="resetCatalogFilters">Сбросить фильтры</button>
+        </div>
+
+        <!-- Bottom Custom Order Banner -->
+        <div class="catalog-order-banner">
+          <div class="order-banner-content">
+            <h3 class="banner-title">Не нашли свою модель?</h3>
+            <p class="banner-desc">Ваш автомобиль может быть следующим. Оставьте запрос — найдём и рассчитаем за 24 часа.</p>
+          </div>
+          <button type="button" class="btn btn-primary" data-modal="consult" data-subject="Индивидуальный подбор под меня">
+            Подобрать под меня <span class="arrow">↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION (DARK) ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-badge-dark">WINNER AUTO CLUB / О НАС</div>
+        
+        <div class="about-header">
+          <h2 class="about-title">
+            Мы верим: ваш автомобиль<br>
+            <span class="text-muted">стоит персонального поиска.</span>
+          </h2>
+          <p class="about-lead">
+            Мы основали клуб в Рустави с одной целью — убрать из процесса покупки подержанного авто стресс, скрытые переплаты и кота в мешке. Каждый автомобиль отбирается так, будто мы покупаем его себе.
+          </p>
+        </div>
+
+        <!-- Large Editorial Car Shot -->
+        <div class="about-editorial-media">
+          <img src="assets/img/about-panamera.jpg" alt="WINNER AUTO CLUB Panamera" loading="lazy">
+          <div class="editorial-caption">
+            <span class="caption-tag">WINNER AUTO CLUB</span>
+            <span class="caption-title">YOUR NEXT CHAPTER / RUSTAVI</span>
+          </div>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="about-pillars">
+          <div class="pillar-card">
+            <span class="pillar-num">140+</span>
+            <h3 class="pillar-title">Параметров инспекции</h3>
+            <p class="pillar-desc">
+              Комплексный физический осмотр экспертом перед ставкой: замер ЛКП, эндоскопия двигателя, состояние несущих элементов и электроники.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <span class="pillar-num">100%</span>
+            <h3 class="pillar-title">Фиксация бюджета</h3>
+            <p class="pillar-desc">
+              Финальная цена автомобиля в Грузии рассчитывается до начала торгов и прописывается в договоре. Никаких внезапных сборов по прибытии.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <span class="pillar-num">7-14</span>
+            <h3 class="pillar-title">Дней на точный подбор</h3>
+            <p class="pillar-desc">
+              Не навязываем компромиссные варианты со стоянки. Ждём и выигрываем лот именно в той комплектации и состоянии, которые нужны вам.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 STEPS ================= -->
+    <section class="section steps-section" id="steps">
+      <div class="container">
+        <div class="section-badge">03 / ОТ ИДЕИ ДО КЛЮЧЕЙ</div>
+        
+        <div class="steps-header">
+          <h2 class="section-title">
+            Большой путь.<br>
+            <span class="text-secondary">Понятные шаги.</span>
+          </h2>
+          <p class="steps-subhead">
+            Четыре прозрачных этапа безопасной доставки автомобиля в Грузию.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <h3 class="step-title">Знакомимся</h3>
+            <p class="step-desc">
+              Обсуждаем ваши предпочтения, желаемую комплектацию и предельный бюджет. Формируем подробный бриф и критерии поиска.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <h3 class="step-title">Сравниваем</h3>
+            <p class="step-desc">
+              Анализируем Carfax, отчёты страховых компаний и фотоархивы. Рассчитываем точную экономику доставки и ремонта каждого лота.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <h3 class="step-title">Планируем заказ</h3>
+            <p class="step-desc">
+              Заключаем договор, утверждаем максимальную ставку, выигрываем лот и страхуем груз на время морской и наземной логистики.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <span class="step-line"></span>
+            </div>
+            <h3 class="step-title">Встречаемся</h3>
+            <p class="step-desc">
+              Принимаем авто в Рустави (Автопапа), проходим растаможку, при необходимости выполняем ремонт и передаём вам готовый авто с ключами.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 CALCULATOR ================= -->
+    <section class="section calc-section" id="calculator">
+      <div class="container">
+        <div class="section-badge">04 / РАЗУМНЫЙ ВЫБОР НАЧИНАЕТСЯ С ЦИФР</div>
+        
+        <div class="calc-header">
+          <h2 class="section-title">
+            Больше автомобиля.<br>
+            <span class="text-secondary">Меньше переплаты.</span>
+          </h2>
+          <p class="calc-subhead">
+            Интерактивный расчёт стоимости под ключ. Изменяйте параметры и наблюдайте реальную разницу с рыночной стоимостью в Грузии.
+          </p>
+        </div>
+
+        <div class="calc-wrapper">
+          <!-- Inputs Column -->
+          <div class="calc-inputs-card">
+            <div class="inputs-header">
+              <h3 class="inputs-title">Параметры расчёта ($)</h3>
+              <button type="button" class="btn-reset" id="calcReset" aria-label="Сбросить к исходным значениям">
+                Сбросить ↺
+              </button>
+            </div>
+
+            <div class="calc-fields">
+              <div class="calc-field">
+                <div class="field-label-row">
+                  <label for="inputMarketPrice">Цена аналога в Грузии</label>
+                  <span class="field-val" id="valMarket">$30 000</span>
+                </div>
+                <input type="range" id="inputMarketPrice" min="10000" max="150000" step="500" value="30000">
+                <div class="field-range-ends"><span>$10k</span><span>$150k</span></div>
+              </div>
+
+              <div class="calc-field">
+                <div class="field-label-row">
+                  <label for="inputBuyPrice">Покупка за рубежом (лот аукциона)</label>
+                  <span class="field-val" id="valBuy">$18 000</span>
+                </div>
+                <input type="range" id="inputBuyPrice" min="5000" max="120000" step="500" value="18000">
+                <div class="field-range-ends"><span>$5k</span><span>$120k</span></div>
+              </div>
+
+              <div class="calc-field">
+                <div class="field-label-row">
+                  <label for="inputShipping">Доставка и страхование (порт Поти)</label>
+                  <span class="field-val" id="valShipping">$2 500</span>
+                </div>
+                <input type="range" id="inputShipping" min="1000" max="6000" step="100" value="2500">
+                <div class="field-range-ends"><span>$1 000</span><span>$6 000</span></div>
+              </div>
+
+              <div class="calc-field">
+                <div class="field-label-row">
+                  <label for="inputCustoms">Таможня и оформление в Грузии</label>
+                  <span class="field-val" id="valCustoms">$1 500</span>
+                </div>
+                <input type="range" id="inputCustoms" min="500" max="15000" step="100" value="1500">
+                <div class="field-range-ends"><span>$500</span><span>$15 000</span></div>
+              </div>
+
+              <div class="calc-field">
+                <div class="field-label-row">
+                  <label for="inputService">Комиссия и сопровождение клуба</label>
+                  <span class="field-val" id="valService">$1 000</span>
+                </div>
+                <input type="range" id="inputService" min="500" max="3000" step="100" value="1000">
+                <div class="field-range-ends"><span>$500</span><span>$3 000</span></div>
+              </div>
+
+              <div class="calc-field">
+                <div class="field-label-row">
+                  <label for="inputRepair">Ремонт / детейлинг (при необходимости)</label>
+                  <span class="field-val" id="valRepair">$0</span>
+                </div>
+                <input type="range" id="inputRepair" min="0" max="10000" step="100" value="0">
+                <div class="field-range-ends"><span>$0</span><span>$10 000</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparison Bar Visual & Results Card -->
+          <div class="calc-results-card">
+            <h3 class="results-heading">Сравнение бюджетов под ключ</h3>
+
+            <!-- Comparative Bars -->
+            <div class="bars-container">
+              <!-- Market Bar -->
+              <div class="bar-group">
+                <div class="bar-label-row">
+                  <span class="bar-name">Аналог на рынке Грузии</span>
+                  <span class="bar-total" id="barMarketTotal">$30 000</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill-market" id="barMarketFill" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Winner Auto Club Bar -->
+              <div class="bar-group">
+                <div class="bar-label-row">
+                  <span class="bar-name">Через WINNER AUTO CLUB</span>
+                  <span class="bar-total highlight" id="barClubTotal">$23 000</span>
+                </div>
+                <div class="bar-track segmented">
+                  <div class="segment seg-buy" id="segBuy" style="width: 60%;" title="Покупка за рубежом"></div>
+                  <div class="segment seg-logistics" id="segLogistics" style="width: 13.33%;" title="Доставка и таможня"></div>
+                  <div class="segment seg-service" id="segService" style="width: 3.33%;" title="Комиссия клуба"></div>
+                </div>
+                <div class="bar-legend">
+                  <span class="legend-item"><span class="dot dot-buy"></span> Автомобиль</span>
+                  <span class="legend-item"><span class="dot dot-logistics"></span> Расходы и таможня</span>
+                  <span class="legend-item"><span class="dot dot-service"></span> Услуги</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Savings KPI Block -->
+            <div class="savings-kpi-block">
+              <span class="savings-label">Ваша расчетная экономия:</span>
+              <div class="savings-number-row">
+                <span class="savings-amount" id="savingsAmount">$7 000</span>
+                <span class="savings-percent" id="savingsPercent">-23.3%</span>
+              </div>
+              <p class="savings-note">
+                * Оценка носит ориентировочный характер на основе текущих тарифов аукционов США/Европы и морских линий. Точный расчёт формируется под конкретный VIN-код.
+              </p>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block" id="btnDiscussCalc" data-modal="consult" data-subject="Обсуждение расчёта калькулятора (Экономия $7 000)">
+              Обсудить этот расчёт <span class="arrow">↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 FAQ ================= -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-badge">05 / БЕЗ НЕОТВЕЧЕННЫХ ВОПРОСОВ</div>
+        
+        <div class="faq-header-row">
+          <div>
+            <h2 class="section-title">
+              Хороший вопрос.<br>
+              <span class="text-secondary">Прямой ответ.</span>
+            </h2>
+          </div>
+          <div class="faq-contact-hint">
+            <span>Остались вопросы?</span>
+            <a href="https://wa.me/995511299299" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              Написать в WhatsApp <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Сколько времени занимает доставка автомобиля в Грузию?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Из США доставка морем в порт Поти занимает в среднем от 6 до 9 недель в зависимости от расположения аукционной площадки (восточное или западное побережье). Из Европы автовозом в Рустави — от 10 до 18 дней. Вы получаете персональный трек-номер и можете отслеживать перемещение контейнера в реальном времени.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Как именно проверяется история и техническое состояние авто?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Мы используем многоуровневый аудит: проверка по базам Carfax и AutoCheck (история ДТП, сервисные отметки, количество владельцев, статус тайтла), детальный анализ повреждений экспертами по кузову и электрике, а при необходимости — выездная инспекция независимого оценщика прямо на площадку аукциона перед началом торгов.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Какие финансовые и юридические гарантии предоставляются?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Мы работаем строго по официальному договору. Все платежи осуществляются официально через банк на имя аукциона или дилера. Автомобиль застрахован на 100% стоимости на протяжении всей транспортировки — от момента погрузки на эвакуатор в стране отправления до выгрузки в Рустави.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Как устроена система оплаты и какой депозит требуется?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Оплата разбита на понятные этапы: первоначальный гарантийный депозит для участия в торгах (возвратный, если ставка не сыграла), затем прямая оплата инвойса аукциона, далее оплата логистики и по прибытии — растаможка и наши услуги. Никаких требований перевести всю сумму наперёд.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Помогаете ли вы с таможенной очисткой и получением номеров?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Да, наши брокеры встречают автомобиль в терминале Поти, сопровождают таможенное оформление в зоне Агентства обслуживания МВД Грузии в Рустави, помогают с прохождением сертификации, техосмотра и установкой регистрационных знаков. Вы забираете полностью готовый к эксплуатации автомобиль.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Возможен ли качественный ремонт авто после американского аукциона?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Да. Мы сотрудничаем со специализированными кузовными станциями в Рустави и Тбилиси. Заранее заказываем оригинальные запчасти, контролируем процесс восстановления геометрии и окраски в профессиональной камере, предоставляя вам фотоотчёты каждого этапа ремонта до сдачи авто.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 06 LOCATION & CONTACTS ================= -->
+    <section class="section location-section" id="location">
+      <div class="container">
+        <div class="section-badge">06 / УВИДИМСЯ В ГРУЗИИ</div>
+        
+        <div class="location-grid">
+          <div class="location-info">
+            <h2 class="section-title">
+              Рустави.<br>
+              <span class="text-secondary">Автопапа.</span>
+            </h2>
+
+            <div class="loc-details">
+              <div class="loc-brand">WINNER AUTO CLUB</div>
+              <p class="loc-address">
+                Грузия, г. Рустави, авторынок AUTOPAPA, центральный сектор.
+              </p>
+              <div class="loc-phone-row">
+                <a href="tel:+995511299299" class="loc-phone">+995 511 299 299</a>
+              </div>
+              <p class="loc-schedule">
+                Понедельник — Воскресенье: 09:00 — 19:00
+              </p>
+
+              <div class="loc-buttons">
+                <a href="https://maps.google.com/?q=AUTOPAPA+Rustavi" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Построить маршрут <span class="arrow">↗</span>
+                </a>
+                <a href="https://wa.me/995511299299" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+                  Написать в WhatsApp <span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Visual Panel -->
+          <div class="location-map-wrap">
+            <div class="map-card">
+              <img src="assets/img/autopapa-map.jpg" alt="Локация WINNER AUTO CLUB на авторынке Автопапа в Рустави" class="map-img">
+              <div class="map-badge-overlay">
+                <div class="map-pin-pulse"></div>
+                <div class="map-badge-text">
+                  <span class="map-badge-title">AUTOPAPA / RUSTAVI</span>
+                  <span class="map-badge-sub">41.5369° N, 45.0211° E</span>
+                </div>
+              </div>
+              <a href="https://maps.google.com/?q=AUTOPAPA+Rustavi" target="_blank" rel="noopener noreferrer" class="map-external-link" aria-label="Открыть в Google Maps">
+                <span>Google Maps ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RED CTA BLOCK ================= -->
+    <section class="red-cta-section">
+      <div class="watermark-w" aria-hidden="true">W</div>
+      <div class="container">
+        <div class="red-cta-inner">
+          <span class="red-cta-tag">ВАША СЛЕДУЮЩАЯ ГЛАВА</span>
+          <h2 class="red-cta-title">
+            Знаете, чего хотите?<br>
+            Осталось найти.
+          </h2>
+          <p class="red-cta-desc">
+            Оставьте заявку на персональный подбор. Мы бесплатно проанализируем доступные лоты в США и Европе и пришлём точный расчёт под ключ.
+          </p>
+          <button type="button" class="btn btn-light-cta" data-modal="consult" data-subject="Красный CTA — Начать подбор автомобиля">
+            Начать подбор автомобиля <span class="arrow">↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo footer-logo">
+            <span class="logo-mark">W</span>
+            <div class="logo-text">
+              <span class="logo-title">WINNER</span>
+              <span class="logo-sub">AUTO CLUB</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Премиальный сервис подбора и доставки автомобилей из США и Европы в Грузию. Полное юридическое и техническое сопровождение.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="footer-col-title">Навигация</span>
+          <a href="#catalog">Каталог</a>
+          <a href="#about">О нас</a>
+          <a href="#steps">Этапы работы</a>
+          <a href="#calculator">Калькулятор</a>
+          <a href="#faq">Вопросы и ответы</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="footer-col-title">Контакты</span>
+          <a href="tel:+995511299299" class="footer-link-phone">+995 511 299 299</a>
+          <a href="https://wa.me/995511299299" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+          <span class="footer-muted-text">Рустави, Автопапа</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2026 WINNER AUTO CLUB. Все права защищены. Рустави / Автопапа.
+        </p>
+        <div class="footer-bottom-actions">
+          <button type="button" class="back-to-top" id="backToTop" aria-label="Вернуться к началу страницы">
+            Наверх ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= INTERACTIVE MODAL ================= -->
+  <div class="modal-backdrop" id="leadModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Закрыть окно">✕</button>
+      
+      <div class="modal-body" id="modalFormContainer">
+        <span class="modal-tag">WINNER AUTO CLUB</span>
+        <h3 class="modal-title" id="modalTitle">Подбор автомобиля</h3>
+        <p class="modal-sub" id="modalSub">Оставьте контактные данные, и ведущий эксперт клуба свяжется с вами в течение 15 минут.</p>
+
+        <form class="lead-form" id="leadForm">
+          <input type="hidden" id="formSubject" name="subject" value="Заявка с сайта">
+
+          <div class="form-group">
+            <label for="userName">Ваше имя *</label>
+            <input type="text" id="userName" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="userPhone">Номер телефона / WhatsApp *</label>
+            <input type="tel" id="userPhone" name="phone" placeholder="+995 ___ ___ ___" required autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="userModel">Интересующая модель / пожелания</label>
+            <input type="text" id="userModel" name="model" placeholder="Например: Porsche Panamera или седан до $30 000">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block modal-submit">
+            Отправить заявку <span class="arrow">↗</span>
+          </button>
+
+          <span class="form-disclaimer">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных для связи с вами.
+          </span>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="modal-success" id="modalSuccess" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3 class="success-title">Заявка принята!</h3>
+        <p class="success-desc">Мы уже получили ваш запрос и свяжемся с вами в WhatsApp или по указанному телефону в ближайшее время.</p>
+        <button type="button" class="btn btn-primary btn-block" id="modalSuccessClose">
+          Понятно, спасибо
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
